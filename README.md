@@ -8,9 +8,9 @@ bikeshare
 udacity project
 
 ### Files used
-washington,
-chicago,
-new_yor_city
+- washington,
+- chicago,
+- new_york_city
 
 ### Credits
 udacity
