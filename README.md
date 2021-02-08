@@ -2,7 +2,7 @@
 08.02.2021
 
 ### Project Title
-bikeshare
+bikeshare_project
 
 ### Description
 udacity project
