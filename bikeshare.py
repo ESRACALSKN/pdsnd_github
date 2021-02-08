@@ -25,10 +25,10 @@ def get_filters():
 
         print('Sorry but that is not a valid city name. Please try again.')
         city = input('Which city would you like to analyze? Chicago, New York or Washington?\n').lower()
-        
+
 
     # TO DO: get user input for month (all, january, february, ... , june)
-    month = input('Please input month name: ')
+    month = input('Please input a valid month name: ')
 
     while month not in ['january', 'february', 'mars', 'april', 'may', 'june', 'all']:
         print('Please enter a valid month name')
