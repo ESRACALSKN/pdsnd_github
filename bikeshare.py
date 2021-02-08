@@ -5,7 +5,7 @@ import numpy as np
 CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
-          
+
 
 def get_filters():
     """
@@ -18,20 +18,20 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    
+
     city = input('Which city would you like to analyze? Chicago, New York or Washington: ').lower()
-    
+
     while city not in CITY_DATA:
- 
-        print('Sorry that is not a valid city name. Please try again.')
+
+        print('Sorry but that is not a valid city name. Could you please try again.')
         city = input('Which city would you like to analyze? Chicago, New York or Washington?\n').lower()
-        
-        
+
+
     # TO DO: get user input for month (all, january, february, ... , june)
-    month = input('Please input month name: ')
-    
+    month = input('Please input a valid month name: ')
+
     while month not in ['january', 'february', 'mars', 'april', 'may', 'june', 'all']:
-        print('Please enter a valid month name')
+        print('Please enter a valid month name and try again')
         month = input('Choose month (all, january, february, ... , june): ')
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
@@ -39,7 +39,7 @@ def get_filters():
     while day not in ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'all']:
         print('Please choose correct day')
         day = input('Choose day of week (all, monday, tuesday, ... sunday): ')
-        
+
 
     print('-'*40)
     return city, month, day
@@ -77,8 +77,8 @@ def load_data(city, month, day):
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df['day_name'] == day.title()]
-        
-        
+
+
     return df
 
 
@@ -176,8 +176,8 @@ def user_stats(df, city):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
-    
+
+
 def display_raw_data(df):
     """Displays raw data on user request.
     Args:
@@ -186,9 +186,9 @@ def display_raw_data(df):
     show_rows = 5
     rows_start = 0
     rows_end = show_rows - 1    # use index values for rows
-    
+
     print_line = lambda char: print(char[0] * 90)
-    
+
     print('\n    Would you like to see some raw data from the current dataset?')
     while True:
         raw_data = input('      (y or n):  ')
